@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:music_player_app/presentation/config/theme.dart';
 import 'package:music_player_app/presentation/screens/home_screen.dart';
+import 'package:music_player_app/presentation/screens/play_song_screen.dart';
 import 'package:music_player_app/presentation/screens/splash_screen.dart';
 
 void main() {
@@ -14,7 +15,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: HomeScreen(),
+      home: const PlaySongScreen(),
       theme:darkTheme,
     );
   }

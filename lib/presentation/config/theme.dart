@@ -25,7 +25,7 @@ final darkTheme = ThemeData(
         fontFamily: "Poppins",
         fontSize: 12,
         fontWeight: FontWeight.w400,
-        color: fontColor
+        color: labelColor
     ),
     labelSmall: TextStyle(
         fontFamily: "Poppins",
