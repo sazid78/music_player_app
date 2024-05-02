@@ -18,7 +18,7 @@ class TrendingSongSlider extends StatelessWidget {
             fit: BoxFit.cover,
           ),
           color: divColor,
-          borderRadius: BorderRadius.circular(30),
+          borderRadius: BorderRadius.circular(45),
         ),
         child: Row(
           children: [
@@ -31,7 +31,7 @@ class TrendingSongSlider extends StatelessWidget {
                         padding: EdgeInsets.all(10),
                         decoration: BoxDecoration(
                           color: divColor,
-                          borderRadius: BorderRadius.circular(10)
+                          borderRadius: BorderRadius.circular(20)
                         ),
                         child: Row(
                           children: [
@@ -76,7 +76,7 @@ class TrendingSongSlider extends StatelessWidget {
         items: sliderItem,
         options: CarouselOptions(
           height: 320,
-          aspectRatio: 16 / 9,
+          aspectRatio: 16 / 10,
           viewportFraction: 1,
           initialPage: 0,
           enableInfiniteScroll: true,
