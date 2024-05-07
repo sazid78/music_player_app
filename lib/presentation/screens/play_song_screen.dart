@@ -6,6 +6,8 @@ import 'package:music_player_app/presentation/widgets/song_controller_button.dar
 import 'package:music_player_app/presentation/widgets/song_details.dart';
 
 class PlaySongScreen extends StatelessWidget {
+
+
   const PlaySongScreen({super.key});
 
   @override
@@ -21,7 +23,8 @@ class PlaySongScreen extends StatelessWidget {
               SizedBox(height: 10,),
               SongAndVolume(),
               SizedBox(height: 20,),
-              SongDetails(),
+              SongDetails(
+              ),
               SizedBox(height: 30,),
               SizedBox(height: 10,),
               Spacer(),

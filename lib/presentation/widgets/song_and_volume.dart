@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:music_player_app/controller/song_player_controller.dart';
 import 'package:music_player_app/presentation/config/colors.dart';
 import 'package:syncfusion_flutter_gauges/gauges.dart';
 
@@ -10,10 +12,10 @@ class SongAndVolume extends StatefulWidget {
 }
 
 class _SongAndVolumeState extends State<SongAndVolume> {
-  var value = 30.0;
+  SongPlayerController songPlayerController = Get.put(SongPlayerController());
   @override
   Widget build(BuildContext context) {
-    return SfRadialGauge(
+    return Obx(() => SfRadialGauge(
       animationDuration: 1,
       enableLoadingAnimation: true,
       axes: [
@@ -24,15 +26,15 @@ class _SongAndVolumeState extends State<SongAndVolume> {
           canRotateLabels: false,
           interval: 10,
           isInversed: false,
-          maximum: 100,
+          maximum: 1,
           minimum: 0,
           showAxisLine: true,
           showLabels: false,
           showTicks: false,
           ranges: [
             GaugeRange(
-                startValue: 0,
-                endValue: value,
+              startValue: 0,
+              endValue: songPlayerController.volumeLavel.value,
               color: primaryColor,
             )
           ],
@@ -40,11 +42,9 @@ class _SongAndVolumeState extends State<SongAndVolume> {
             MarkerPointer(
               color: primaryColor,
               borderWidth: 20,
-              value: value,
+              value: songPlayerController.volumeLavel.value,
               onValueChanged: (vaLuee){
-                setState(() {
-                  value = vaLuee;
-                });
+                songPlayerController.changeVolume(vaLuee);
               },
               enableAnimation: true,
               enableDragging: true,
@@ -55,20 +55,20 @@ class _SongAndVolumeState extends State<SongAndVolume> {
           ],
           annotations: [
             GaugeAnnotation(
-              horizontalAlignment: GaugeAlignment.center,
+                horizontalAlignment: GaugeAlignment.center,
                 widget: Container(
-                  width: 280,
-                  height: 280,
+                  width: 250,
+                  height: 250,
                   decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(1000),
-                    image: DecorationImage(image: AssetImage("assets/images/cover.jpg")),
-                    color: divColor
+                      borderRadius: BorderRadius.circular(1000),
+                      image: DecorationImage(image: AssetImage("assets/images/cover.jpg")),
+                      color: divColor
                   ),
                 )
             )
           ],
         )
       ],
-    );
+    ));
   }
 }

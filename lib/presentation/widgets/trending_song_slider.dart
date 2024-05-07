@@ -2,6 +2,8 @@ import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:get/get.dart';
+import 'package:music_player_app/controller/cloud_song_controller.dart';
 import 'package:music_player_app/presentation/config/colors.dart';
 
 class TrendingSongSlider extends StatelessWidget {
@@ -14,7 +16,7 @@ class TrendingSongSlider extends StatelessWidget {
         padding: EdgeInsets.all(20),
         decoration: BoxDecoration(
           image: DecorationImage(
-            image: AssetImage("assets/images/cover.jpg"),
+            image:  AssetImage("assets/images/cover.jpg"),
             fit: BoxFit.cover,
           ),
           color: divColor,
@@ -30,8 +32,8 @@ class TrendingSongSlider extends StatelessWidget {
                       Container(
                         padding: EdgeInsets.all(10),
                         decoration: BoxDecoration(
-                          color: divColor,
-                          borderRadius: BorderRadius.circular(20)
+                            color: divColor,
+                            borderRadius: BorderRadius.circular(20)
                         ),
                         child: Row(
                           children: [
@@ -48,9 +50,9 @@ class TrendingSongSlider extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Text("Matir manus",style: TextStyle(
-                        fontFamily: "Poppins",
-                        fontSize: 20,
-                        fontWeight: FontWeight.w500
+                          fontFamily: "Poppins",
+                          fontSize: 20,
+                          fontWeight: FontWeight.w500
                       ),)
                     ],
                   ),
@@ -61,7 +63,7 @@ class TrendingSongSlider extends StatelessWidget {
                           fontFamily: "Poppins",
                           fontSize: 12,
                           fontWeight: FontWeight.w500,
-                        color: labelColor
+                          color: labelColor
                       ),)
                     ],
                   )
