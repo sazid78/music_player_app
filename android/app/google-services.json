@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "356233728825",
+    "project_id": "audio-player-cfbab",
+    "storage_bucket": "audio-player-cfbab.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:356233728825:android:e7131443f0440f4b674ee8",
+        "android_client_info": {
+          "package_name": "com.example.music_player_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyASXyI5mSCNL88RBEz5x2jAoMluZMLi78Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
